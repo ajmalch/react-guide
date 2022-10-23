@@ -26,9 +26,13 @@ const App = () =>  {
     },
   ];
 
+  const expenseSubmitHandler = (submittedExpense) =>{
+    console.log(submittedExpense);
+  }
+
   return ( 
     <div>
-      <NewExpense />
+      <NewExpense onExpenseSubmit={expenseSubmitHandler} />
       <Expenses items={expenses}/>
     </div>
   );
